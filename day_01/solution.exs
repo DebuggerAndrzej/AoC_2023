@@ -1,5 +1,5 @@
 # ------------------------First subtask------------------------------
-defmodule FistSubtask do
+defmodule FirstSubtask do
   def get_two_digit_number_from_string(str) do
     case String.length(str) do
       1 -> "#{str}#{str}"
@@ -14,7 +14,7 @@ first_solution =
   File.stream!("input.txt")
   |> Stream.map(&String.trim/1)
   |> Stream.map(fn line -> line |> String.replace(~r/[\D+]/, "") end)
-  |> Stream.map(fn line -> FistSubtask.get_two_digit_number_from_string(line) end)
+  |> Stream.map(fn line -> FirstSubtask.get_two_digit_number_from_string(line) end)
   |> Stream.map(fn line ->
     if line != 0 do
       {num, _} = Integer.parse(line)
